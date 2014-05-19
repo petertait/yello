@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.petertait.yello"
+        version   = "1.0.0">
+
+    <name>Yello</name>
+
+    <description>
+        An educational app for students and teachers to help them organise and interact with high school trips.
+    </description>
+
+    <author href="http://petertait.com" email="contact@petertait.com">
+        Peter Tait
+    </author>
+    
+    <icon src="assets/images/apple-touch-icon-60x60.png" gap:platform="ios" width="60" height="60" />
+    <icon src="assets/images/apple-touch-icon-120x120.png" gap:platform="ios" width="120" height="120" />
+    
+    <gap:splash src="assets/images/apple-touch-startup-image-320x480.png" gap:platform="ios" width="320" height="480" />
+    <gap:splash src="assets/images/apple-touch-startup-image-640x960.png" gap:platform="ios" width="640" height="960" />
+    
+    <gap:splash src="assets/images/apple-touch-startup-image-640x1136.png" gap:platform="ios" width="640" height="1136" />
+	
+	<preference name="phonegap-version" value="3.3.0" /> 
+	<preference name="orientation" value="portrait" />
+	<!--<preference name="DisallowOverscroll" value="true" />-->
+	<preference name="UIWebViewBounce" value="false" />
+	
+    <gap:platform name="ios" />
+    
+</widget>

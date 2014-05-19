@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-title" content="Yello">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	
+	<link rel="stylesheet" href="static/styles/screen.css">
+	
+	{% block header %}
+	<title>{% block title %}Yello{% endblock %}</title>
+	{% endblock header %}
+	
+	<script src="phonegap.js"></script>
+	<script src="static/scripts/jquery.min.js"></script>
+	<script src="static/scripts/ratchet.js"></script>
+	
+	<script>
+	//document.ontouchmove = function(e) {e.preventDefault()};
+	$(function() {
+		// var fb = new FingerBlast ('body');
+		if($(".splash-wrap").is(":visible")) {
+		    $(".modal").hide();
+		}
+		
+		// Open login modal
+		$("#login-btn").click(function() {
+			//$(".mini-modal-login").fadeIn();
+			$('.dark-overlay').fadeIn();
+			$('.mini-modal-login').css('z-index', 20);
+			$('.mini-modal-login .mini-modal').stop(true).animate({ 'top': '15%', 'opacity': '1' }, { queue: false, duration: 600 });
+			return false;
+		});
+		
+		$(".dark-overlay").click(function() {
+			$('.dark-overlay').fadeOut();
+			$(".mini-modal-login .mini-modal").stop(true).animate({ 'top': '-100%', 'opacity': '0' }, { queue: false, duration: 600 });
+			return false;
+		});
+	});
+	</script>
+
+</head>
+  <body id="splash" onload="init();">
+	
+	<!-- #content -->
+	{% block content %}
+	{% endblock content %}
+	<!-- /#content -->	
+	
+	<!-- .mini-modal-login -->
+	<div class="mini-modal-wrap mini-modal-login">
+	    <div class="mini-modal">
+	    	<span class="avatar">Avatar</span>
+	        <form method="post" action="timeline.html" data-transition="fade">
+	        	<input type="text" name="username" placeholder="Username" />
+	        	<input type="password" name="password" placeholder="Password" />
+	        	<a href="timeline-login.html" data-ignore="push" class="btn blue-btn">Log in</a>
+	        </form>
+	    </div>
+	</div>
+	<!-- /.mini-modal-login -->
+	
+	<div class="dark-overlay"></div>
+
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<ons-page data-snap-ignore="true" class="photos-modal modal">
+	
+	<header class="bar bar-nav">
+	    <a ng-click="ons.navigator.popPage()" class="icon icon-left pull-left"></a>
+	    <a ng-click="ons.screen.presentPage('camera.html')" class="icon icon-camera pull-right ss-camera"></a>
+	    <a class="cancel-select-btn pull-right pull-right-text">Cancel</a>
+	    <h1 class="title">Photos</h1>
+	</header>
+	
+	<ons-scroller class="full-content">
+		<ul class="photos-grid">
+			<li><img src="assets/images/activity/nhm-7.jpg" alt=""></li>
+			<li><img src="assets/images/activity/nhm-1.jpg" alt=""></li>
+			<li><img src="assets/images/activity/nhm-2.jpg" alt=""></li>
+			<li><img src="assets/images/activity/nhm-3.jpg" alt=""></li>
+			<li><img src="assets/images/activity/nhm-4.jpg" alt=""></li>
+			<li><img src="assets/images/activity/nhm-5.jpg" alt=""></li>
+			<li><img src="assets/images/activity/nhm-6.jpg" alt=""></li>
+			<li class="selected"><img src="assets/images/activity/nhm-8.jpg" alt=""></li>
+			<li><img src="assets/images/activity/nhm-9.jpg" alt=""></li>
+			<li><img src="assets/images/activity/nhm-10.jpg" alt=""></li>
+			<li><img src="assets/images/activity/nhm-4.jpg" alt=""></li>
+			<li><img src="assets/images/activity/nhm-8.jpg" alt=""></li>
+			<li><img src="assets/images/activity/nhm-3.jpg" alt=""></li>
+			<li><img src="assets/images/activity/nhm-9.jpg" alt=""></li>
+			<li><img src="assets/images/activity/nhm-6.jpg" alt=""></li>
+			<li><img src="assets/images/activity/nhm-2.jpg" alt=""></li>
+			<li><img src="assets/images/activity/nhm-7.jpg" alt=""></li>
+			<li><img src="assets/images/activity/nhm-8.jpg" alt=""></li>
+			<li><img src="assets/images/activity/nhm-9.jpg" alt=""></li>
+			<li><img src="assets/images/activity/nhm-10.jpg" alt=""></li>
+			<li><img src="assets/images/activity/nhm-1.jpg" alt=""></li>
+			<li><img src="assets/images/activity/nhm-2.jpg" alt=""></li>
+			<li><img src="assets/images/activity/nhm-3.jpg" alt=""></li>
+			<li><img src="assets/images/activity/nhm-4.jpg" alt=""></li>
+			<li><img src="assets/images/activity/nhm-5.jpg" alt=""></li>
+			<li><img src="assets/images/activity/nhm-6.jpg" alt=""></li>
+			<li><img src="assets/images/activity/nhm-7.jpg" alt=""></li>
+			<li><img src="assets/images/activity/nhm-8.jpg" alt=""></li>
+			<li><img src="assets/images/activity/nhm-9.jpg" alt=""></li>
+			<li><img src="assets/images/activity/nhm-10.jpg" alt=""></li>
+		</ul>
+	</ons-scroller>
+	
+	<ons-bottom-toolbar class="bar bar-tab select-bar-tab">
+	    <a class="tab-item">
+	    	<span class="btn purple-btn select-btn">Select</span>
+	    </a>
+	</ons-bottom-toolbar>
+	
+	<ons-bottom-toolbar class="bar bar-tab select-actions-bar-tab">
+	    <a class="tab-item">
+	    	<span class="icon ss-trash"></span>
+	    </a>
+	    <a class="tab-item" ng-click="ons.navigator.pushPage('group-add-back.html')">
+	    	<span class="icon ss-usergroup"></span>
+	    </a>
+	    <a class="tab-item" ng-click="ons.navigator.pushPage('challenge-list-add.html')">
+	    	<span class="icon ss-checkclipboard"></span>
+	    </a>
+	</ons-bottom-toolbar>
+	
+</ons-page>

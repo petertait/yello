@@ -1,0 +1,74 @@
+<ons-navigator title="Camera" hide-toolbar="true">
+	<ons-page data-snap-ignore="true" class="camera-modal modal">
+		
+		<div class="flip">
+			
+			<div class="flip-card flipped">
+			
+				<div class="face front">
+				
+					<header class="bar bar-nav">
+					   <a ng-click="ons.screen.dismissPage()" class="icon icon-left icon-close pull-left"></a>
+					   <h1 class="title">Camera</h1>
+					</header>
+					
+					<header class="bar bar-tab bar-paint">
+						<nav class="paint-colours pull-left">
+							<a class="red active"></a>
+							<a class="blue"></a>
+							<a class="purple"></a>
+							<a class="yellow"></a>
+							<a class="green"></a>
+						</nav>
+						<a class="ss-replay pull-right"></a>
+					</header>
+					
+					<div class="full-content camera-content"></div>
+					  
+					<footer class="bar bar-standard bar-footer bar-capture">
+					   <a class="icon ss-flash"></a>
+					   <a class="capture-btn show-camera-capture ss-camera"></a>
+					   <a class="icon ss-searchbarcode scan-btn camera-flip-btn"></a>
+					</footer>
+					
+					<!-- .bar-capture-actions -->
+					<nav class="bar bar-tab bar-capture-actions">
+					    <a class="tab-item">
+					    	<span class="icon ss-delete show-camera"></span>
+					    </a>
+					    <a ng-click="ons.screen.presentPage('photos-add.html')" class="tab-item">
+					    	<span class="icon ss-picture"></span>
+					    </a>
+					    <a class="tab-item" ng-click="ons.screen.presentPage('group-close.html')">
+					    	<span class="icon ss-usergroup"></span>
+					    </a>
+					    <a class="tab-item">
+					    	<span class="icon ss-checkclipboard"></span>
+					    </a>
+					</nav>
+					<!-- /.bar-capture-actions -->
+		
+				</div>
+				
+				<div class="face back">
+					<header class="bar bar-nav">
+					   <a ng-click="ons.screen.dismissPage()" class="icon icon-left icon-close pull-left"></a>
+					   <h1 class="title">Code Scanner</h1>
+					</header>
+					
+					<div class="full-content scan-content"><div class="scanner"></div></div> 
+					
+					<footer class="bar bar-standard bar-footer bar-capture">
+					   <a class="icon ss-flash"></a>
+					   <a class="capture-btn ss-searchbarcode" ng-click="ons.screen.presentPage('activity-scan.html')"></a>
+					   <a class="icon ss-camera scan-flip-btn"></a>
+					</footer>
+				</div>
+				
+			</div> 
+			
+			<div class="flash"></div>	
+			      
+		</div>
+	</ons-page>
+</ons-navigator>

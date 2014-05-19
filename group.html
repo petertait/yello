@@ -1,0 +1,207 @@
+<ons-navigator title="Group" hide-toolbar="true">
+	<ons-page class="group-wrap">
+			
+		<!-- .bar-nav -->
+		<header class="bar bar-nav">
+		    <a id="left-side-menu" class="icon icon-menu pull-left"></a>
+		    <a ng-click="ons.screen.presentPage('camera.html')" class="icon icon-camera pull-right ss-camera"></a>
+		    <h1 class="title logo"></h1>
+		</header>
+		<!-- /.bar-nav -->
+		
+		<ons-scroller>
+			
+	  		<!-- .group-content-->
+	  		<div class="group-content">
+	  			<div class="group-chat-bar"><a class="btn card-btn ss-chat" ng-click="ons.navigator.pushPage('group-chat.html')">Group Chat</a></div>
+	  			<h1 class="content-title">Purple Group</h1>
+	  			
+	  			<!-- .gmap -->
+	  			<a class="gmap">		
+	  				<img src="http://maps.googleapis.com/maps/api/staticmap?center=51.501751,-0.129981&zoom=16&format=png&sensor=false&size=640x500&maptype=roadmap&style=feature:road.arterial|visibility:on|color:0xffffff&style=feature:road.arterial|visibility:on|color:0xfedf3d&style=feature:road.highway|visibility:on|color:0xfedf3d&style=feature:road.local|element:geometry|visibility:on|color:0xffffff&style=feature:landscape|visibility:on|color:0xe4eaf0&style=feature:water|visibility:on|color:0x7fc8ed&style=feature:road|element:labels|visibility:off&style=feature:poi.park|element:geometry.fill|visibility:on|color:0x82c828&style=feature:poi.park|element:labels|visibility:off&style=feature:landscape.man_made|element:geometry|visibility:off|weight:0.9&style=feature:road|element:geometry.stroke|weight:0.1|visibility:off&style=element:labels|visibility:off" alt="Natural History Museum">
+	  				
+	  				<div class="pin john"><span class="avatar john"></span></div>
+	  				<div class="pin james"><span class="avatar james"></span></div>
+	  				<div class="pin sarah"><span class="avatar sarah"></span></div>
+	  				<div class="pin kele"><span class="avatar kele"></span></div>
+	  				<div class="pin steve"><span class="avatar steve"></span></div>
+	  				<div class="pin denver"><span class="avatar denver"></span></div>
+	  				<div class="pin natasha"><span class="avatar natasha"></span></div>
+	  				<div class="pin katie"><span class="avatar"></span></div>
+	  				
+	  			</a>			
+	  			<!-- /.gmap -->	
+	  			
+	  			
+	  			<!-- .group-members -->
+	  			<!--<h3 class="group-sub-title">Students</h3>-->
+	  			<div class="group-members">
+	  				<h2 class="sub-title ss-usergroup">Group Members</h2>
+	  				<ul class="scroll-carousel" data-snap-ignore="true">
+		  				<li>
+		  					<div class="avatar john" ng-click="ons.screen.presentPage('profile-close.html')"></div>
+		  					<h3>James <br>Wilson</h3>
+		  				</li>
+		  				
+		  				<li>
+		  					<div class="avatar james" ng-click="ons.screen.presentPage('profile-purple.html')"></div>
+		  					<h3>John Evans</h3>
+		  				</li>
+		  				
+		  				<li>
+		  					<div class="avatar sarah" ng-click="ons.screen.presentPage('profile-purple.html')"></div>
+		  					<h3>Sarah <br>Jones</h3>
+		  				</li>
+		  				<li>
+		  					<div class="avatar kele" ng-click="ons.screen.presentPage('profile-purple.html')"></div>
+		  					<h3>Kele Homes</h3>
+		  				</li>
+		  				<li>
+		  					<div class="avatar" ng-click="ons.screen.presentPage('profile-purple.html')"></div>
+		  					<h3>Katie Hopkins</h3>
+		  				</li>
+		  				<li>
+		  					<div class="avatar steve" ng-click="ons.screen.presentPage('profile-purple.html')"></div>
+		  					<h3>Steve <br>Austin</h3>
+		  				</li>
+		  				
+		  				<li>
+		  					<div class="avatar denver" ng-click="ons.screen.presentPage('profile-purple.html')"></div>
+		  					<h3>Denver <br>Washington</h3>
+		  				</li>
+		  				<li>
+		  					<div class="avatar natasha" ng-click="ons.screen.presentPage('profile-purple.html')"></div>
+		  					<h3>Natasha <br>Cope</h3>
+		  				</li>
+		  			</ul>
+	  			</div>
+	  			
+	  			<!--<h3 class="group-sub-title">Group Supervisors</h3>
+	  			<ul class="group-members">
+	  				<li>
+	  					<div class="avatar teacher"></div>
+	  					<h3>Mrs Davis</h3>
+	  				</li>
+	  			</ul>-->
+	  			<!-- /.group-members -->
+	  			
+	  			<div class="notifications-wrap">
+	  				<h2 class="ss-megaphone sub-title">Group Notifications</h2>
+	  				<ul class="notifications">
+	  					<li>
+	  						<span class="avatar steve category"></span>
+	  						<hgroup>
+	  							<h4>Steve messaged in group chat</h4>
+	  							<h5 class="time">5 mins ago</h5>
+	  						</hgroup>
+	  					</li>
+	  					<li>
+	  						<span class="avatar category"></span>
+	  						<hgroup>
+	  							<h4>Katie completed a challenge</h4>
+	  							<h5 class="time">32 mins ago</h5>
+	  						</hgroup>
+	  					</li>
+	  					<li>
+	  						<span class="avatar john category"></span>
+	  						<hgroup>
+	  							<h4>You completed a challenge!</h4>
+	  							<h5 class="time">1 hour ago</h5>
+	  						</hgroup>
+	  					</li>
+	  					<li>
+	  						<span class="avatar natasha category"></span>
+	  						<hgroup>
+	  							<h4>Natasha is at the Cocoon Exbibit</h4>
+	  							<h5 class="time">Over 1 hour ago</h5>
+	  						</hgroup>
+	  					</li>
+	  					<li>
+	  						<span class="ss-usergroup category"></span>
+	  						<hgroup>
+	  							<h4>Your group won the Science Museum Challenge!</h4>
+	  							<h5 class="time">2 hours ago</h5>
+	  						</hgroup>
+	  					</li>
+	  					<li>
+	  						<span class="avatar steve category"></span>
+	  						<hgroup>
+	  							<h4>Steve completed a challenge</h4>
+	  							<h5 class="time">Over 2 hours ago</h5>
+	  						</hgroup>
+	  					</li>
+	  					<li>
+	  						<span class="avatar john category"></span>
+	  						<hgroup>
+	  							<h4>You completed a challenge!</h4>
+	  							<h5 class="time">3 hours ago</h5>
+	  						</hgroup>
+	  					</li>
+	  					
+	  				</ul>
+	  				<ul class="notifications hidden-notifications">
+	  					<li>
+	  						<span class="avatar denver category"></span>
+	  						<hgroup>
+	  							<h4>Denver shared a photo in group chat</h4>
+	  							<h5 class="time">3 hours ago</h5>
+	  						</hgroup>
+	  					</li>
+	  					<li>
+	  						<span class="avatar john category"></span>
+	  						<hgroup>
+	  							<h4>You shared a photo in group chat!</h4>
+	  							<h5 class="time">Over 3 hours ago</h5>
+	  						</hgroup>
+	  					</li>
+	  					<li>
+	  						<span class="avatar natasha category"></span>
+	  						<hgroup>
+	  							<h4>Natasha shared a photo in group chat</h4>
+	  							<h5 class="time">Over 4 hours ago</h5>
+	  						</hgroup>
+	  					</li>
+	  					<li>
+	  						<span class="ss-usergroup category"></span>
+	  						<hgroup>
+	  							<h4>Your group won the V&A Challenge!</h4>
+	  							<h5 class="time">4 hours ago</h5>
+	  						</hgroup>
+	  					</li>
+	  				</ul>
+	  				<ul class="notifications hidden-notifications-2">
+	  					<li>
+	  						<span class="avatar denver category"></span>
+	  						<hgroup>
+	  							<h4>Denver is at the Cocoon exhibit</h4>
+	  							<h5 class="time">Over 4 hours ago</h5>
+	  						</hgroup>
+	  					</li>
+	  					<li>
+	  						<span class="avatar natasha category"></span>
+	  						<hgroup>
+	  							<h4>Natasha shared a photo in group chat</h4>
+	  							<h5 class="time">Over 4 hour ago</h5>
+	  						</hgroup>
+	  					</li>
+	  					<li>
+	  						<span class="avatar john category"></span>
+	  						<hgroup>
+	  							<h4>You shared a photo in group chat!</h4>
+	  							<h5 class="time">5 hours ago</h5>
+	  						</hgroup>
+	  					</li>
+	  				</ul>
+	  				<div class="load-more">
+	  					<button class="btn card-btn ss-reload">Load more</button>
+	  				</div>
+	  				
+	  			</div>
+	  			
+	  		</div>
+	  		<!-- / .group-content -->
+	
+		</ons-scroller>
+		
+	</ons-page>	
+</ons-navigator>

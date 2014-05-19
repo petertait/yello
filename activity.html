@@ -1,0 +1,138 @@
+<ons-page class="activity-wrap">
+		
+	<!-- .bar-nav -->
+	<header class="bar bar-nav">
+	    <a ng-click="ons.navigator.popPage()" class="icon icon-left pull-left"></a>
+	    <a ng-click="ons.screen.presentPage('camera.html')" class="icon icon-camera pull-right ss-camera"></a>
+	    <h1 class="title">Activity</h1>
+	</header>
+	<!-- /.bar-nav -->
+	
+	<ons-scroller>
+		
+		<!-- .scroller-inner -->
+		<div class="scroller-inner" style="background-color: #8750b9; box-shadow: 0 -5px 0 0 rgba(0,0,0,0.2);">
+		
+			<!-- .gmap -->
+		   	<a class="gmap">		
+				<img src="http://maps.googleapis.com/maps/api/staticmap?center=51.502751,-0.126981&zoom=15&format=png&sensor=false&size=640x500&maptype=roadmap&style=feature:road.arterial|visibility:on|color:0xffffff&style=feature:road.arterial|visibility:on|color:0xfedf3d&style=feature:road.highway|visibility:on|color:0xfedf3d&style=feature:road.local|element:geometry|visibility:on|color:0xffffff&style=feature:landscape|visibility:on|color:0xe4eaf0&style=feature:water|visibility:on|color:0x7fc8ed&style=feature:road|element:labels|visibility:off&style=feature:poi.park|element:geometry.fill|visibility:on|color:0x82c828&style=feature:poi.park|element:labels|visibility:off&style=feature:landscape.man_made|element:geometry|visibility:off|weight:0.9&style=feature:road|element:geometry.stroke|weight:0.1|visibility:off&style=element:labels|visibility:off" alt="Natural History Museum">
+				<span class="pin"></span>	
+			</a>			
+		   	<!-- /.gmap -->			   	
+		   	
+		   	<!-- .activity -->
+		   	<div class="activity-content inner-content">
+	
+		   	    <h1 class="content-title h2">Natural History Museum</h1>
+		   		
+		   		<!-- .progress-bar-wrap -->
+		   		<div class="progress-bar-wrap">
+		   		    <span class="progress-bar bar-80"></span>
+		   		    <ul class="meta">
+		   		    	<li class="ss-clock">9:15  - 15:30</li>
+		   		    	<li class="time-remain">17mins remaining</li>
+		   		   	</ul>
+		   		</div>
+		   		<!-- /.progress-bar-wrap -->
+		   		
+		   		<!-- .info-item -->
+		   		<div class="content-item info-item">
+		   			<div class="card">
+		   				<ul class="meta">
+		   					<li class="ss-info"></li>
+		   				</ul>
+		   				<div class="inner-card info-card">
+		   					<p class="intro">The Natural History Museum in London is a museum exhibiting a vast range of specimens.</p>
+		   					<p>The museum is home to life and earth science specimens comprising some 70 million items within five main collections.</p>
+		   					<p>The museum is particularly famous for its exhibition of dinosaur skeletons and ornate architecture—sometimes dubbed a cathedral of nature—both exemplified by the large Diplodocus.</p>
+		   				</div>
+		   				<a ng-click="ons.screen.presentPage('website.html')" class="btn card-btn">Visit website</a>
+		   			</div>
+		   		</div>
+		   		<!-- /.info-item -->
+		   		
+		   		<!-- .photos-item -->
+		   		<div class="content-item photos-item">
+		   			<div class="card">
+		   				<ul class="meta">
+		   					<li class="ss-picture">37</li>
+		   				</ul>
+		   				<div class="photos-card scroll-carousel" data-snap-ignore="true">
+		   					<img src="assets/images/activity/nhm-1.jpg" alt="Natural History Museum">
+		   					<img src="assets/images/activity/nhm-2.jpg" alt="Natural History Museum">
+		   					<img src="assets/images/activity/nhm-3.jpg" alt="Natural History Museum">
+		   					<img src="assets/images/activity/nhm-4.jpg" alt="Natural History Museum">
+		   					<img src="assets/images/activity/nhm-5.jpg" alt="Natural History Museum">
+		   					<img src="assets/images/activity/nhm-6.jpg" alt="Natural History Museum">
+		   					<img src="assets/images/activity/nhm-7.jpg" alt="Natural History Museum">
+		   					<img src="assets/images/activity/nhm-8.jpg" alt="Natural History Museum">
+		   					<img src="assets/images/activity/nhm-9.jpg" alt="Natural History Museum">
+		   					<img src="assets/images/activity/nhm-10.jpg" alt="Natural History Museum">
+		   					<a ng-click="ons.screen.presentPage('photos.html')" class="btn ss-plus"></a>
+		   				</div>
+		   			</div>
+		   		</div>
+		   		<!-- /.photos-item -->
+		   		
+		   	    
+		   	    <!-- .challenges-item -->
+		   	    <div class="content-item challenges-item">
+		   	        <div class="card">
+		   	            <ul class="meta">
+		   	                <li class="ss-checkclipboard">7</li>
+		   	            </ul>
+		   	            <!-- .challenges-list -->
+		   	            <ul class="challenges-list">
+		   	                <li>
+		   	                	<a ng-click="ons.navigator.pushPage('challenge-photo.html')" class="inner-card">
+		   	                	    <span class="checkbox ss-check"></span>
+		   	                	    <h3>Describe a dinosaur...</h3>
+		   	                	</a>
+		   	                </li>
+		   	                <li class="completed">
+		   	                	<a ng-click="ons.navigator.pushPage('challenge-complete.html')" class="inner-card">
+		   	                	    <span class="checkbox ss-check checked"></span>
+		   	                	    <h3>10 photos of rare na...</h3>
+		   	                	</a>
+		   	                </li>
+		   	                <li>
+		   	                	<a ng-click="ons.navigator.pushPage('challenge-photo.html')" class="inner-card">
+		   	                	    <span class="checkbox ss-check"></span>
+		   	                	    <h3>Answer these 5 que...</h3>
+		   	                	</a>
+		   	                </li>
+		   	                <li>
+		   	                	<a ng-click="ons.navigator.pushPage('challenge-photo.html')" class="inner-card">
+		   	                	    <span class="checkbox ss-check"></span>
+		   	                	    <h3>Locate all bug stick...</h3>
+		   	                	</a>
+		   	                </li>
+		   	                <li class="completed">
+		   	                	<a ng-click="ons.navigator.pushPage('challenge-complete.html')" class="inner-card">
+		   	                	    <span class="checkbox ss-check checked"></span>
+		   	                	    <h3>5 photos of differen...</h3>
+		   	                	</a>
+		   	                </li>
+		   	            </ul>
+		   	            <!-- /.challenges-list -->
+		   	            <a ng-click="ons.navigator.pushPage('activity-challenges.html')" class="btn card-btn">Activity Challenges</a>
+		   	        </div>
+		   	    </div>
+		   	    <!-- /.full-content-item -->
+		   	    
+		   	    <!--<div class="content-item scan-item">
+		   	    	<a href="#camera" class="btn scan-btn ss-searchbarcode camera-flip-btn">Scan Activity Code</a>
+		   	    </div>-->
+		   	    <div class="load-more load-more-blue">
+		   	    	<a ng-click="ons.screen.presentPage('scanner.html')" class="btn card-btn ss-searchbarcode camera-flip-btn">Scan Activity Code</a>
+		   	    </div>
+	   	    
+	   	    </div>
+	   	    <!-- /.scroller-inner -->
+	   	    
+	   	</div>
+	   	<!-- /.activity -->
+
+	</ons-scroller>
+	
+</ons-page>	
