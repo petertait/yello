@@ -4125,9 +4125,7 @@ only screen and (min-device-pixel-ratio: 2) {
 	box-shadow: $drop-bottom-shadow;
 	padding: 30px 20px;
 	overflow: scroll;
-	-webkit-overflow-scrolling:touch;
-	display: none!important;
-	
+	-webkit-overflow-scrolling:touch;	
 	
 	& .inner-notify-modal{
 		padding-top: 30px;
