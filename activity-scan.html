@@ -3,7 +3,7 @@
 	<!--<span class="status-bar"></span>-->
 	
 	<ons-scroller>
-	    <a ng-click="ons.screen.dismissPage()" class="icon icon-left icon-close pull-left close-scan"></a>
+	    <a ng-click="ons.navigator.popPage()" class="icon icon-left pull-left close-scan"></a>
 	    <span class="mini-title"><strong>Activity Scan</strong></span>
 	    
 	    <!-- .activity-scan-content -->
@@ -33,7 +33,7 @@
 			<div class="content-item photos-item videos-item">
 				<div class="card">
 					<ul class="meta">
-						<li class="ss-video">3</li>
+						<li class="ss-playvideo">3</li>
 					</ul>
 					<div class="photos-card videos-card scroll-carousel" data-snap-ignore="true">
 						<div class="video-thumb">
@@ -104,11 +104,11 @@
 			<br class="clearfix">
 			
 			<div class="load-more">
-				<a ng-click="ons.screen.presentPage('activity-audio-tour.html')" class="btn card-btn ss-music">Audio Exhibit Tour</a>
+				<a ng-click="ons.navigator.pushPage('activity-audio-tour.html')" class="btn card-btn ss-music">Audio Exhibit Tour</a>
 			</div>
 	        
 	    </div>
 	    <!-- /.activity-scan-content -->
 	</ons-scroller>
 
-</ons-page>	 
+</ons-page>

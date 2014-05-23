@@ -34,15 +34,15 @@
 					<!-- .bar-capture-actions -->
 					<nav class="bar bar-tab bar-capture-actions">
 					    <a class="tab-item">
-					    	<span class="icon ss-delete show-camera"></span>
+					    	<span class="icon ss-draw"></span>
 					    </a>
-					    <a ng-click="ons.screen.presentPage('photos-add.html')" class="tab-item">
+					    <a ng-click="ons.navigator.pushPage('photos-add.html')"  class="tab-item">
 					    	<span class="icon ss-picture"></span>
 					    </a>
-					    <a class="tab-item" ng-click="ons.screen.presentPage('group-close.html')">
+					    <a class="tab-item" ng-click="ons.navigator.pushPage('group-add-back.html')">
 					    	<span class="icon ss-usergroup"></span>
 					    </a>
-					    <a class="tab-item">
+					    <a class="tab-item" ng-click="ons.navigator.pushPage('challenge-list-add.html')">
 					    	<span class="icon ss-checkclipboard"></span>
 					    </a>
 					</nav>
@@ -58,11 +58,14 @@
 					
 					<div class="full-content scan-content"><div class="scanner"></div></div> 
 					
+					<!-- .bar-capture -->
 					<footer class="bar bar-standard bar-footer bar-capture">
 					   <a class="icon ss-flash"></a>
-					   <a class="capture-btn ss-searchbarcode" ng-click="ons.screen.presentPage('activity-scan.html')"></a>
+					   <a class="capture-btn ss-searchbarcode" ng-click="ons.navigator.pushPage('activity-scan.html')"></a>
 					   <a class="icon ss-camera scan-flip-btn"></a>
 					</footer>
+					<!-- /.bar-capture -->
+					
 				</div>
 				
 			</div> 

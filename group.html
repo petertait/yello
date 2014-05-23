@@ -13,9 +13,6 @@
 			
 	  		<!-- .group-content-->
 	  		<div class="group-content">
-	  			<div class="group-chat-bar"><a class="btn card-btn ss-chat" ng-click="ons.navigator.pushPage('group-chat.html')">Group Chat</a></div>
-	  			<h1 class="content-title">Purple Group</h1>
-	  			
 	  			<!-- .gmap -->
 	  			<a class="gmap">		
 	  				<img src="http://maps.googleapis.com/maps/api/staticmap?center=51.501751,-0.129981&zoom=16&format=png&sensor=false&size=640x500&maptype=roadmap&style=feature:road.arterial|visibility:on|color:0xffffff&style=feature:road.arterial|visibility:on|color:0xfedf3d&style=feature:road.highway|visibility:on|color:0xfedf3d&style=feature:road.local|element:geometry|visibility:on|color:0xffffff&style=feature:landscape|visibility:on|color:0xe4eaf0&style=feature:water|visibility:on|color:0x7fc8ed&style=feature:road|element:labels|visibility:off&style=feature:poi.park|element:geometry.fill|visibility:on|color:0x82c828&style=feature:poi.park|element:labels|visibility:off&style=feature:landscape.man_made|element:geometry|visibility:off|weight:0.9&style=feature:road|element:geometry.stroke|weight:0.1|visibility:off&style=element:labels|visibility:off" alt="Natural History Museum">
@@ -33,8 +30,10 @@
 	  			<!-- /.gmap -->	
 	  			
 	  			
+	  			<h1 class="content-title">Purple Group</h1>
+	  			<!--<div class="group-chat-bar"><a class="btn card-btn ss-chat" ng-click="ons.navigator.pushPage('group-chat.html')">Group Chat</a></div>-->
+	  			
 	  			<!-- .group-members -->
-	  			<!--<h3 class="group-sub-title">Students</h3>-->
 	  			<div class="group-members">
 	  				<h2 class="sub-title ss-usergroup">Group Members</h2>
 	  				<ul class="scroll-carousel" data-snap-ignore="true">
@@ -58,7 +57,7 @@
 		  				</li>
 		  				<li>
 		  					<div class="avatar" ng-click="ons.screen.presentPage('profile-purple.html')"></div>
-		  					<h3>Katie Hopkins</h3>
+		  					<h3>Katie <br>Hopkins</h3>
 		  				</li>
 		  				<li>
 		  					<div class="avatar steve" ng-click="ons.screen.presentPage('profile-purple.html')"></div>
@@ -74,6 +73,9 @@
 		  					<h3>Natasha <br>Cope</h3>
 		  				</li>
 		  			</ul>
+		  			
+		  			<a class="btn card-btn ss-chat" ng-click="ons.navigator.pushPage('group-chat.html')">Group Chat</a>
+		  			
 	  			</div>
 	  			
 	  			<!--<h3 class="group-sub-title">Group Supervisors</h3>

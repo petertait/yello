@@ -36,6 +36,7 @@ body, .page{
 }
 input, textarea{
 	font-family: $font-family;
+	font-size: 18px!important;
 }
 button{
 	box-sizing: content-box;
@@ -77,7 +78,7 @@ button:hover, a:hover, .topcoat-navigation-bar i:hover{
 }
 .group-wrap .onsen_navigator-black-mask, .group-wrap .topcoat-page__bg, .group-wrap .page, .group-wrap.page{
 	background-color: transparent;
-	background-image: linear-gradient(to bottom, $blue 50%, $purple 50%);
+	background-image: linear-gradient(to bottom, #e5ebf0 50%, $purple 50%);
 }
 .group-chat-wrap .onsen_navigator-black-mask, .group-chat-wrap .topcoat-page__bg, .group-chat-wrap .page, .group-chat-wrap.page{
 	/*background-color: transparent;
@@ -372,8 +373,20 @@ button:hover, a:hover, .topcoat-navigation-bar i:hover{
         box-shadow: 2px 0 0 rgba(0, 0, 0, 0.1);
         position: absolute;
         
+        &.bar-0{
+            width: 0%;
+        }
+        &.bar-20{
+            width: 20%;
+        }
+        &.bar-40{
+            width: 40%;
+        }
         &.bar-50{
             width: 50%;
+        }
+        &.bar-60{
+            width: 60%;
         }
         &.bar-80{
             width: 80%;
@@ -537,7 +550,7 @@ button:hover, a:hover, .topcoat-navigation-bar i:hover{
         	margin-top: 20px;
         }
         & input[type="password"], & input[type="text"]{
-        	font-size: 24px;
+        	font-size: 24px!important;
         	padding: 37px 20px 32px; 
         	line-height: 1.4;
         }
@@ -1224,9 +1237,6 @@ button:hover, a:hover, .topcoat-navigation-bar i:hover{
 	-webkit-transition: width 0.3s ease;
 	transition: width 0.3s ease;
 	background: #3e4e5b;
-	border-top: 1px solid #040609; 
-	//-webkit-box-shadow: inset -7px 0 0 0 rgba(0, 0, 0, 0.2);
-	//box-shadow: inset -7px 0 0 0 rgba(0, 0, 0, 0.2);
 }
 .snap-drawer-left {
 	left: 0;
@@ -1346,6 +1356,16 @@ button:hover, a:hover, .topcoat-navigation-bar i:hover{
 	& .content-item {
 		margin-bottom: 30px;
 	}
+	& .content-title{
+		position: relative;
+		z-index: 6;	
+	}
+	& .progress-bar-wrap{
+		-webkit-animation: pulse-small 2s infinite;
+		-animation: pulse-small 2s infinite;
+		z-index: 5;
+		position: relative;
+	}
 	
 }
 // Splash
@@ -1418,7 +1438,8 @@ button:hover, a:hover, .topcoat-navigation-bar i:hover{
 // .card 
 .card{
     @include clear-wrap;
-    margin: 20px 10px;
+    margin: 20px 0;
+    border-radius: 0;
     padding-top: 0;
     
 	// .card .inner-card
@@ -1492,6 +1513,15 @@ button:hover, a:hover, .topcoat-navigation-bar i:hover{
 // Timeline
 .timeline-wrap{
 	
+	& .content-item{
+		padding-left: 10px;
+		padding-right: 10px;
+		
+		& .card{
+			border-radius: 4px;
+		}
+	}
+	
 	& .lunch-item .inner-card{
 		background-image: none;
 	}
@@ -1541,6 +1571,22 @@ button:hover, a:hover, .topcoat-navigation-bar i:hover{
 	& .inner-card label{
 		padding-top: 28px;
 	}
+	
+	&.challenges-item .meta{
+		padding-right: 10px;
+		& li{
+			display: block;
+			margin-right: 0;
+			& span{
+				float: right;
+				color: rgba(0,0,0,0.5);
+				text-shadow: none;
+				font-size: 22px;
+				letter-spacing: 0;
+				padding-top: 3px;
+			}
+		}
+	}
 }
 // /.full-content-item
 // .content-item 
@@ -1561,7 +1607,7 @@ button:hover, a:hover, .topcoat-navigation-bar i:hover{
         background-color: rgba(96,54,135,0.7);
         display: block;
         position: relative;
-        left: 35px;
+        left: 25px;
         bottom: 0;
         border-radius: 20px;
     }
@@ -1626,9 +1672,13 @@ button:hover, a:hover, .topcoat-navigation-bar i:hover{
     // .content-item.register-item
     &.register-item{
         opacity: 1;
+        padding-left: 0;
+        padding-right: 0;
         //overflow: hidden;
         //box-shadow: $drop-top-shadow;
-        
+        &:after{
+        	left: 35px;
+        }
         &:before{
         	content:"";
         	position: absolute;
@@ -1701,7 +1751,7 @@ button:hover, a:hover, .topcoat-navigation-bar i:hover{
             background-color: rgba(96,54,135,0.7);
             display: block;
             position: relative;
-            left: 35px;
+            left: 25px;
             top: 1px;
             border-radius: 20px; 
         }
@@ -1791,6 +1841,8 @@ button:hover, a:hover, .topcoat-navigation-bar i:hover{
     // .content-item.complete-item
     &.complete-item{
         opacity: 1;
+        padding-left: 0;
+        padding-right: 0;
         
         .timeline-wrap &:after{
             display: none;
@@ -2003,7 +2055,7 @@ only screen and (min-device-pixel-ratio: 2) {
 			width: 300px;
 			
 			&:first-child{
-				margin-left: 0;
+				margin-left: 10px;
 			}
 		}		
 		
@@ -2011,6 +2063,7 @@ only screen and (min-device-pixel-ratio: 2) {
 			width: 100%;
 			padding-top: 5px;
 			margin-bottom: 11px;
+			border-radius: 4px;
 			
 			
 			& .progress-bar-wrap, & .progress-bar{
@@ -2499,7 +2552,7 @@ only screen and (min-device-pixel-ratio: 2) {
 	&:before{
 		content:"";
 		position: absolute;
-		top: -30px;
+		top: -100px;
 		height: 500px;
 		width: 100%;
 		background-image: linear-gradient(to bottom, rgba(135,80,185,0) 0%,rgba(135,80,185,1) 100%), $striped-light;
@@ -2548,7 +2601,7 @@ only screen and (min-device-pixel-ratio: 2) {
 // /.activity-challenges-wrap
 
 // .scan-item
-.scan-item{;
+.scan-item{
 	box-shadow: inset 0 8px 0 0 rgba(0,0,0,0.2);
 	background-color: $blue;
 	background-image: $striped-dark;
@@ -2928,12 +2981,14 @@ only screen and (min-device-pixel-ratio: 2) {
 						font-size: 16px;
 						color: $gray-med;
 						-webkit-overflow-scrolling: touch;
-						box-shadow: inset 0 0 5px 1px rgba(0,0,0,0.4);
+						-webkit-box-shadow: inset 0 2px 0 0 rgba(0,0,0,0.2);
+						box-shadow: inset 0 2px 0 0 rgba(0,0,0,0.2);
 						border: 1px solid darken($purple, 25%);
 						color: #3e4e5a;
+						border: none;
 						
 						&:focus{
-							box-shadow: inset 0 0 7px 1px rgba(0,0,0,0.6);
+							/*box-shadow: inset 0 0 7px 1px rgba(0,0,0,0.6);*/
 							color: $gray-med;
 						}
 					}
@@ -3093,32 +3148,23 @@ only screen and (min-device-pixel-ratio: 2) {
 // .group-wrap
 .group-wrap{
 	
-	& .group-chat-bar{
-		background-color: $blue;
-		background-image: linear-gradient(to bottom, rgba(37,184,220,1) 0%, rgba(37,184,220,0) 100%), $striped-dark;
-		color: white;
-		font-size: 22px;
-		text-shadow: 1px 1px 0 rgba(0,0,0,0.2);
-		display: block;
-		padding: 62px 0 5px;
-		text-align: center;
-		
-		& .btn{
-			padding-bottom: 11px;
-		}
-		& .btn:before{
-			font-size: 130%;
-			margin-right: 10px;
-			top: 1px;
-			position: relative;
-		}
-	}
-	
 	& .group-members{
 		padding-bottom: 20px;
 		//box-shadow: inset 0 5px 0 rgba(0,0,0,0.1);
 		background-color: $purple;
 		background-image: linear-gradient(to bottom, rgba(135,80,185,0) 0%,rgba(135,80,185,1) 100%), $striped-light;	
+		
+		& .btn.ss-chat{
+			padding-bottom: 11px;
+			margin: 25px auto 10px;
+			
+			&:before{
+				font-size: 130%;
+				margin-right: 10px;
+				top: 1px;
+				position: relative;
+			}
+		}
 		
 		& .group-sub-title{
 			text-align: center;
@@ -3129,8 +3175,6 @@ only screen and (min-device-pixel-ratio: 2) {
 			font-weight: 400;
 			margin: 20px auto 0;
 			padding-bottom: 10px;
-			border-bottom: 1px solid rgba(255,255,255,0.1);
-			border-bottom: 1px solid darken($purple, 15%);
 			//box-shadow: 0 5px 0 rgba(0,0,0,0.1);
 		}
 		
@@ -3140,20 +3184,22 @@ only screen and (min-device-pixel-ratio: 2) {
 			
 			& li{
 				display: inline-block;
-				width: 100px;
-				margin-right: 10px;
-				margin-top: 30px;
-				margin-bottom: 0px;
+				margin-right: 5px;
+				margin-top: 20px;
+				margin-bottom: 3px;
 				color: white;
 				text-align: center;
 				vertical-align: top;
 				
+				&:last-child{
+					margin-right: 10px;
+				}
 				& .avatar{
 					display: table;
-					margin: 0 auto 15px;
-					width: 95px;
-					height: 95px;
-					background-size: 100px;
+					margin: 0 auto;
+					width: 90px;
+					height: 90px;
+					background-size: 90px;
 					
 					&:hover{
 						cursor:pointer;
@@ -3171,15 +3217,14 @@ only screen and (min-device-pixel-ratio: 2) {
 					text-align: center;
 					word-wrap: break-word;
 					display: block; 
+					display: none;
 				}
 			}
 		}
 	}
 	
 	& .gmap{
-		box-shadow: inset 0 -5px 0 rgba(0,0,0,0.2);
 		position: relative;
-		border-bottom: 1px solid darken($purple, 30%);
 		height: 200px;
 		
 		& .pin{
@@ -3480,7 +3525,7 @@ only screen and (min-device-pixel-ratio: 2) {
 		background-color: rgba(153,169,186,0.5);
 	}
 	
-	& .icon-close{
+	& .icon-close, & .icon-left{
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -3497,6 +3542,15 @@ only screen and (min-device-pixel-ratio: 2) {
 		.app-not-installed &, .safari-mac &{
 			background-position: 15px 18px;
 		}
+	}
+	& .icon-left{
+		background-image: url(../images/left-wh.svg);
+		background-size: 16px;
+		background-position: 15px 36px;
+		
+			.app-not-installed &, .safari-mac &{
+				background-position: 15px 22px;
+			}
 	}
 	& .fullspan-img{
 		@include fullspan-img;
@@ -3670,7 +3724,7 @@ only screen and (min-device-pixel-ratio: 2) {
 		}
 	}
 	
-	& .icon-close{
+	& .icon-close, & .icon-left{
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -3686,6 +3740,15 @@ only screen and (min-device-pixel-ratio: 2) {
 			
 			.app-not-installed &, .safari-mac &{
 				background-position: 15px 18px;
+			}
+	}
+	& .icon-left{
+		background-image: url(../images/left-wh.svg);
+		background-size: 16px;
+		background-position: 15px 36px;
+		
+			.app-not-installed &, .safari-mac &{
+				background-position: 15px 22px;
 			}
 	}
 	
@@ -3836,19 +3899,7 @@ only screen and (min-device-pixel-ratio: 2) {
 		
 		& li{
 			position: relative;
-			
-			
-			/*&:before{
-			    content: "";
-			    width: 17px;
-			    height: 17px;
-			    background-color: $purple;
-			    display: block;
-			    border-radius: 17px;
-			    position: absolute;
-			    left: 10px;
-			    top: 26px;
-			}*/
+
 			&:before{
 				content: "";
 				border: 4px solid $purple;
@@ -3857,7 +3908,7 @@ only screen and (min-device-pixel-ratio: 2) {
 				width: 14px;
 				height: 14px;
 				left: 10px;
-				top: 26px;
+				top: 25px;
 				z-index: 1;
 				position: absolute;	
 				display: block;
@@ -4243,7 +4294,63 @@ only screen and (min-device-pixel-ratio: 2) {
 	}
 }
 // /Notification Modal
-
+// .resize-modal
+.resize-modal{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+	z-index: 10001;
+	background-color: $red;
+	background-image: linear-gradient(to bottom, rgba(250,90,40,0) 0%,rgba(250,90,40,1) 80%), $striped-light;
+	text-align: center;
+	color: white;
+	text-shadow: 1px 1px 0 rgba(0,0,0,0.15);
+	box-shadow: $drop-bottom-shadow;
+	padding: 30px 20px;
+	overflow: scroll;
+	-webkit-overflow-scrolling:touch;
+	display: none;	
+	
+	& .inner-resize-modal{
+		padding-top: 30px;
+	}
+	& .logo{
+	    text-indent: 100%;
+	    white-space: nowrap;
+	    overflow: hidden;
+	    background: url(../images/logo-wh.svg) no-repeat center;
+	    background-size: 130px;
+	    width: 100%;
+	    height: 80px;
+	    position: relative;
+	    top: 5px;
+	    -webkit-animation: pulse 3s infinite;
+	    -animation: pulse 3s infinite;
+	}
+	& h2{
+		line-height: 1.3;
+		font-weight: 400;
+	}
+	& .btn{
+		margin: 35px auto;
+		padding-left: 35px;
+		padding-right: 35px;
+		border: 2px solid $blue-dark;
+		color: $blue-dark;
+		background-color: transparent;
+		text-shadow: none;
+		
+		&.btn:before{
+			margin: 10px;
+		}
+	}
+}
+// /.resize-modal
 // .landscape-modal
 .landscape-modal{
 	position: fixed;
@@ -4283,6 +4390,9 @@ only screen and (min-device-pixel-ratio: 2) {
 	.safari-mac .alert-modal, .not-safari .alert-modal{
 		display: block;
 	}
+	.not-safari .alert-modal{
+		z-index: 10002;
+	}
 	.ios-modal, .not-safari .alert-modal .btn{
 		display: none;
 	}
@@ -4296,12 +4406,22 @@ only screen and (min-device-pixel-ratio: 2) {
 	.safari-mac .alert-modal, .not-safari .alert-modal, .app-installed .notify-modal{
 		display: none;
 	}
+	.resize-modal{
+		display: none!important;
+	}
 }
 
 // Smartphones (Landscape)
 @media only screen 
 and (max-device-width : 480px) and (min-width : 321px) {
 	.landscape-modal{
+		display: block;
+	}
+}
+// Resize Modal
+@media only screen 
+and (min-width : 481px){
+	.resize-modal{
 		display: block;
 	}
 }

@@ -24,13 +24,19 @@
 			$(".notify-modal").fadeOut();
 		});
 		
-		// Close mini modal l
+		// Close mini modal login
 		$(document.body).on('click', '.close-mini-modal, .dark-overlay', function(){
 			$('.dark-overlay').fadeOut();
 			$(".mini-modal, .mini-modal-login .mini-modal").stop(true).animate({ 'top': '-100%', 'opacity': '0' }, { queue: false, duration: 300 });
 			return false;
 		});	
-
+		
+		// Resize Window
+		$(document.body).on('click', '.resize-window', function(){
+			window.resizeTo('400', '780');
+			$(".resize-modal").fadeOut();
+		});
+		
 	    // Checkboxes
 	    $(document.body).on('click', '.checkbox', function(){
 	        $(this).toggleClass('checked');
@@ -179,11 +185,11 @@
 		});
 		
 		// Load more notifications
-		$(document.body).on('click', '.load-more .btn', function(){
+		$(document.body).on('click', '.profile-wrap .load-more .btn', function(){
 			$('.hidden-notifications').slideDown();
 			$(this).addClass('load-even-more');
 		});
-		$(document.body).on('click', '.load-even-more', function(){
+		$(document.body).on('click', '.profile-wrap .load-even-more', function(){
 			$('.hidden-notifications-2').slideDown();
 			$('.load-more').slideUp();
 		});
